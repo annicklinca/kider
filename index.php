@@ -62,10 +62,6 @@ $message=$_POST['message'];
                     <p>Kider provides information on how to improve the health, nutrition, and early skills development of children under three</p>
                 </div>
                 <div class="row g-4">
-                <?php
-          $quer=mysqli_query($conn,"SELECT * FROM  aboutus");
-          while ($row=mysqli_fetch_array($quer)){
-          ?> 
                     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="facility-item">
                             <div class="facility-icon bg-primary">
@@ -74,16 +70,66 @@ $message=$_POST['message'];
                                 <span class="bg-primary"></span>
                             </div>
                             <div class="facility-text bg-primary">
-                                <h3 class="text-primary mb-3"><?php echo $row['title'] ; ?></h3>
-                                <p class="mb-0"><?php echo $row['image'] ; ?></p>
+                                <h3 class="text-primary mb-3"><a href="class1.php">Nutrition</a></h3>
+                                <p class="mb-0"> * Breastfeeding and formula feeding
+                                    * Starting solids
+                                    * Healthy eating habits for toddlers
+                                    * Food allergies and intolerances
+                                    * Recipes for nutritious meals and snacks</p>
                             </div>
                         </div>
                     </div>
-                    <?php
-                   } 
-                  ?>
-                    
-               
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="facility-item">
+                            <div class="facility-icon bg-success">
+                                <span class="bg-success"></span>
+                                <i class="fa fa-futbol fa-3x text-success"></i>
+                                <span class="bg-success"></span>
+                            </div>
+                            <div class="facility-text bg-success">
+                                <h3 class="text-success mb-3"><a href="class2.php">Games and songs</a></h3>
+                                <p class="mb-0"> * Starting games
+                                    * song habits for toddlers
+                                    * Food allergies and intolerances
+                                    * Recipes for nutritious meals and snacks</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="facility-item">
+                            <div class="facility-icon bg-warning">
+                                <span class="bg-warning"></span>
+                                <i class="fa fa-home fa-3x text-warning"></i>
+                                <span class="bg-warning"></span>
+                            </div>
+                            <div class="facility-text bg-warning">
+                                <h3 class="text-warning mb-3"><a href="class3.php">Health care</a></h3>
+                                <p class="mb-0">* Common illnesses and injuries in children under 4
+                                    * Vaccination schedules
+                                    * First aid tips
+                                    * Premature babies 
+                                    * Healthy sleep habits
+                                    * Physical activity guidelines</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="facility-item">
+                            <div class="facility-icon bg-info">
+                                <span class="bg-info"></span>
+                                <i class="fa fa-chalkboard-teacher fa-3x text-info"></i>
+                                <span class="bg-info"></span>
+                            </div>
+                            <div class="facility-text bg-info">
+                                <h3 class="text-info mb-3"><a href="class4.php">Positive Learning</a></h3>
+                                <p class="mb-0">* Motor skills development
+                                    * Language development
+                                    * Social and emotional development
+                                    * Cognitive development
+                                    * Activities and games to support skills development</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -130,7 +176,7 @@ $message=$_POST['message'];
             <div class="container">
                 <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                     <h1 class="mb-3">Our Classes</h1>
-                    <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+                    <p></p>
                 </div>
                 <div class="row g-4">
                 <?php

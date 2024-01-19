@@ -21,13 +21,13 @@ if (isset($_GET['delabout'])){
 }
 
 if (isset($_GET['delclass'])){
-    $del_service=$_GET['delservice'];
-    $del_quer=mysqli_query($conn,"DELETE FROM classes WHERE id='$del_service' ");   
+    $del_class=$_GET['delclass'];
+    $del_quer=mysqli_query($conn,"DELETE FROM classes WHERE id='$del_class' ");   
     if ($del_quer) {        
         ?>
         <script type="text/javascript">alert('Services Deleted, Successfully!')</script>
         <?php
-        header("location:services.php");
+        header("location:classes.php");
     }
     else {
         

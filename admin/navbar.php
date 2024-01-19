@@ -38,7 +38,7 @@ include '../admin_session.php';
 	<nav class="pcoded-navbar menupos-fixed menu-light brand-orange ">
 		<div class="navbar-wrapper ">
 			<div class="navbar-brand header-logo" style="background-color: #f37105">
-				<a href="index.php" class="text-white">Kider-Admin
+				<a href="../index.php" class="text-white">Kider-Admin
 				</a>
 				<a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
 			</div>
@@ -51,20 +51,15 @@ include '../admin_session.php';
 						<a href="index.php" class="nav-link"><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
 					</li>
 					
-					<li class="nav-item pcoded-hasmenu">
-						<a href="#!" class="nav-link"><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Clients</span></a>
-						<ul class="pcoded-submenu">
-                            <li><a href="client.php">All Clients</a></li>
-						</ul>
-					</li>
+					
 					<li class="nav-item pcoded-menu-caption">
 						<label>website</label>
 					</li>
 					<li class="nav-item pcoded-hasmenu">
-						<a href="#!" class="nav-link"><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Add Content</span></a>
+						<a href="classes.php" class="nav-link"><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Add Content</span></a>
 						<ul class="pcoded-submenu">
                                 
-                            <li><a href="home.php">Home</a></li>
+                          
                             <li><a href="about.php">About</a></li>
                             <li><a href="classes.php">Classes</a></li>
                             <li><a href="question.php">Questions</a></li>

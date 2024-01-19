@@ -2,28 +2,31 @@
 include "navbar.php";
 if (isset($_POST['send'])){
     
-    $pname=$_POST['pname'];
-    $pemail=$_POST['pemail'];
-    $date_meet=$_POST['date_meet'];
-    $time_prefer=$_POST['time_prefer'];
-    $messages=$_POST['messages'];
+    $firstname=$_POST['firstname'];
+    $lastname=$_POST['lastname'];
+    $phone=$_POST['phone'];
+    $email=$_POST['email'];
+    $password=$_POST['password'];
+    $role=$_POST['role'];
 
-        $sql=mysqli_query($conn,"INSERT INTO appointment(
-            pname,
-            pemail,
-            date_meet,
-            time_prefer,
-            messages) VALUES (
-                '$pname',
-                '$pemail',
-                '$date_meet',
-                '$time_prefer',
-                '$messages')");
+        $sql=mysqli_query($conn,"INSERT INTO user(
+            firstname,
+            lastname,
+            phone,
+            email,
+            password,
+            role) VALUES (
+                '$firstname',
+                '$lastname',
+                '$phone',
+                '$email',
+                '$password',
+                '$role')");
         if ($sql) {
-            $successmessage .='Add appointment Successfully';  
+            $successmessage .='Add user Successfully';  
         }
         else {
-            $errormessage .='Add appointment failed!'.$conn->error;     
+            $errormessage .='Add user failed!'.$conn->error;     
         }    
    
 }
@@ -32,12 +35,12 @@ if (isset($_POST['send'])){
         <!-- Page Header End -->
         <div class="container-xxl py-5 page-header position-relative mb-5">
             <div class="container py-5">
-                <h1 class="display-2 text-white animated slideInDown mb-4">Appointment</h1>
+                <h1 class="display-2 text-white animated slideInDown mb-4">Register</h1>
                 <nav aria-label="breadcrumb animated slideInDown">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
                         <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                        <li class="breadcrumb-item text-white active" aria-current="page">Appointment</li>
+                        <li class="breadcrumb-item text-white active" aria-current="page">Register</li>
                     </ol>
                 </nav>
             </div>
@@ -52,41 +55,49 @@ if (isset($_POST['send'])){
                     <div class="row g-0">
                         <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                             <div class="h-100 d-flex flex-column justify-content-center p-5">
-                                <h1 class="mb-4">Make Appointment</h1>
+                                <h1 class="mb-4">Register here</h1>
                                 <form method="POST">
                                     <div class="row g-3">
                                         <div class="col-sm-6">
                                             <div class="form-floating">
-                                                <input type="text" name="pname" class="form-control border-0" id="gname" placeholder="Gurdian Name">
-                                                <label for="pname">Parent Name</label>
+                                                <input type="text" name="firstname" class="form-control border-0" id="gname" placeholder="Gurdian Name">
+                                                <label for="pname">First Name</label>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-floating">
-                                                <input type="email" name="pemail" class="form-control border-0" id="gmail" placeholder="Gurdian Email">
-                                                <label for="pemail">Parent Email</label>
+                                                <input type="text" name="lastname" class="form-control border-0" id="gmail" placeholder="Gurdian Email">
+                                                <label for="pemail">Last Name</label>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-floating">
-                                                <input type="date" name="date_meet" class="form-control border-0" id="cname" placeholder="Child Name">
-                                                <label for="date_meet">Date Preferred</label>
+                                                <input type="text" name="phone" class="form-control border-0" id="cname" placeholder="Child Name">
+                                                <label for="date_meet">Phone</label>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-floating">
-                                                <input type="time" name="time_prefer" class="form-control border-0" id="cage" placeholder="Child Age">
-                                                <label for="cage">Time preferred</label>
+                                                <input type="email" name="email" class="form-control border-0" id="cage" placeholder="Child Age">
+                                                <label for="cage">Email</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-floating">
+                                                <input type="password" name="password" class="form-control border-0" id="cage" placeholder="Child Age">
+                                                <label for="cage">Password</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-floating">
+                                              <select name="role" class="form-control border-0">
+                                                <option name="role">parent</option>
+                                               </select>
+                                                <label for="cage">Role</label>
                                             </div>
                                         </div>
                                         <div class="col-12">
-                                            <div class="form-floating">
-                                                <textarea class="form-control border-0" name="messages" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
-                                                <label for="message">Details</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                        <input  type="submit" name="send" value="Add Class" class="btn btn-primary w-100 py-3" style="width: 100%;">
+                                        <input  type="submit" name="send" value="Save" class="btn btn-primary w-100 py-3" style="width: 100%;">
                                             <!-- <button class="btn btn-primary w-100 py-3" name="send" type="submit">Submit</button> -->
                                         </div>
                                     </div>
@@ -154,7 +165,7 @@ if (isset($_POST['send'])){
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h3 class="text-white mb-4">Newsletter</h3>
-                        <p></p>
+                        <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
                         <div class="position-relative mx-auto" style="max-width: 400px;">
                             <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
                             <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
