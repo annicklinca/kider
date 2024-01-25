@@ -55,10 +55,11 @@ $message=$_POST['message'];
 
 
         <!-- Facilities Start -->
-        <div class="container-xxl py-5">
+        <!-- style="background-color:red;" -->
+        <div class="container-xxl py-5" >
             <div class="container">
                 <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                    <h1 class="mb-3">Our Facilities</h1>
+                    <h1 class="mb-3" style="color:red;">Our Facilities</h1>
                     <p>Kider provides information on how to improve the health, nutrition, and early skills development of children under three</p>
                 </div>
                 <div class="row g-4">
